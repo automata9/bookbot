@@ -18,3 +18,17 @@ def character_counter(string):
             count_dict[c] = 1
     
     return count_dict
+
+def get_num(dict):
+    return dict["num"]
+
+
+def dict_sorter(dict):
+    dict_list = []
+    
+    for key in dict:
+        dict_list.append({"char": key, "num": dict[key]})
+    
+    dict_list.sort(key=get_num, reverse=True)
+    return dict_list
+    
