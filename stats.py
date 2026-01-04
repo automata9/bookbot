@@ -6,3 +6,15 @@ def get_num_words(string):
         count += 1
     
     return count
+
+def character_counter(string):
+    count_dict = {}
+    string = string.lower()
+
+    for c in string:
+        if c in count_dict:
+            count_dict[c] += 1
+        else:
+            count_dict[c] = 1
+    
+    return count_dict
